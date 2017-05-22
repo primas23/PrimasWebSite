@@ -3,13 +3,15 @@ import { RouterModule } from '@angular/router';
 import { UniversalModule } from 'angular2-universal';
 
 import { AppComponent } from './components/app/app.component';
+import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
 
 @NgModule({
     bootstrap: [ AppComponent ],
     declarations: [
-        AppComponent,        
+        AppComponent,
+        NavmenuComponent,
         HomeComponent,
         BlogComponent
     ],
