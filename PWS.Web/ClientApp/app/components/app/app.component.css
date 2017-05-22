@@ -5,8 +5,16 @@
     }
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
 .body-content {
     background-color: #f1f1f1;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .tag-square {
@@ -20,4 +28,20 @@
 
 .btn-square {
     border-radius: 0;
+}
+
+.card {
+    background-color: #fff;
+    margin: 16px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.opacity {
+    opacity: 0.60;
+}
+
+footer {
+    background-color: #616161;
+    color: #fff;
+    padding: 32px;
 }
