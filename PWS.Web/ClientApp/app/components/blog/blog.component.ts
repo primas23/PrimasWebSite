@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'blog',
-    templateUrl: './blog.component.html',
-    styleUrls: ['./blog.component.css']
+    templateUrl: './blog.component.html'
 })
+
 export class BlogComponent {
 }
