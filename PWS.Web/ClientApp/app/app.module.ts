@@ -3,27 +3,36 @@ import { RouterModule } from '@angular/router';
 import { UniversalModule } from 'angular2-universal';
 
 import { AppComponent } from './components/app/app.component';
-import { NavmenuComponent } from './components/navmenu/navmenu.component';
+import { NavmenuComponent } from './components/shared/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
-import { BlogComponent } from './components/blog/blog.component';
+import { BlogSummaryComponent } from './components/blog/blog-summary/blog-summary.component';
+import { BlogListComponent } from './components/blog/blog-list/blog-list.component';
+//import { BlogComponent } from './components/blog/blog.component';
+
+import { BlogService } from './services/blog-service';
 
 @NgModule({
-    bootstrap: [ AppComponent ],
+    bootstrap: [AppComponent],
     declarations: [
         AppComponent,
         NavmenuComponent,
         HomeComponent,
-        BlogComponent
+        BlogListComponent,
+        BlogSummaryComponent
+
+  //      BlogComponent
     ],
     imports: [
-        UniversalModule, // Must be first import. This automatically imports BrowserModule, HttpModule, and JsonpModule too.
+        UniversalModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'blog', component: BlogComponent },
+            { path: 'blog', component: BlogListComponent },
             { path: '**', redirectTo: 'home' }
         ])
-    ]
+    ],
+    providers: [BlogService]
 })
+
 export class AppModule {
 }
