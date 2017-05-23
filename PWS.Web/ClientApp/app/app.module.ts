@@ -7,7 +7,7 @@ import { NavmenuComponent } from './components/shared/navmenu/navmenu.component'
 import { HomeComponent } from './components/home/home.component';
 import { PostSummaryComponent } from './components/blog/post-summary/post-summary.component';
 import { PostListComponent } from './components/blog/post-list/post-list.component';
-//import { BlogComponent } from './components/blog/blog.component';
+import { PostDetailsComponent } from './components/blog/post-details/post-details.component';
 
 import { PostService } from './services/post-service';
 
@@ -18,7 +18,8 @@ import { PostService } from './services/post-service';
         NavmenuComponent,
         HomeComponent,
         PostListComponent,
-        PostSummaryComponent
+        PostSummaryComponent,
+        PostDetailsComponent
 
   //      BlogComponent
     ],
@@ -28,6 +29,7 @@ import { PostService } from './services/post-service';
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'blog', component: PostListComponent },
+            { path: 'post/details/:id', component: PostDetailsComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ],
