@@ -1,6 +1,6 @@
 ﻿import { Comment } from './comment';
 
-export class Blog {
+export class Post {
     id: string;
     imageSrc: string;
     title: string;

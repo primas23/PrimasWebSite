@@ -2,19 +2,19 @@
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 
-import { Blog } from '../models/blog';
+import { Post } from '../models/post';
 
 @Injectable()
-export class BlogService {
+export class PostService {
     constructor(private http: Http) {
     }
 
-    getBlogSummaries() {
-        //return this.http.get('api/Blog/GetBlogSummaries')
-        //    .map(r => r.json() as Blog[])
+    getPostSummaries() {
+        //return this.http.get('api/Post/GetPostSummaries')
+        //    .map(r => r.json() as Post[])
         //    .toPromise();
 
-        let first = new Blog()
+        let first = new Post()
         first.id = '1';
         first.imageSrc = './images/woods.jpg';
         first.title = 'TITLE HEADING';
@@ -23,7 +23,7 @@ export class BlogService {
         first.content = 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.';
         first.comments = [];
 
-        let second = new Blog()
+        let second = new Post()
         second.id = '2';
         second.imageSrc = './images/woods.jpg';
         second.title = 'TITLE HEADING 2';
@@ -36,9 +36,9 @@ export class BlogService {
         return [first, second];
     }
 
-    //getBlogDetail(id: string) {
-    //    return this.http.get(`api/Blog/GetBlogDetail/${id}`)
-    //        .map(r => r.json() as Blog)
+    //getPostDetail(id: string) {
+    //    return this.http.get(`api/Post/GetPostDetail/${id}`)
+    //        .map(r => r.json() as Post)
     //        .toPromise();
     //}
 }

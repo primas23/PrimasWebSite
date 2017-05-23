@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { BlogComponent } from '../blog/blog.component'
+import { PostListComponent } from '../blog/post-list/post-list.component'
 
 @Component({
     selector: 'home',

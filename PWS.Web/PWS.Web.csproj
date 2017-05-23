@@ -20,7 +20,7 @@
     <Content Remove="ClientApp\**" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ClientApp\app\components\blog\blog-details\" />
+    <Folder Include="ClientApp\app\components\blog\post-details\" />
   </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
