@@ -11,11 +11,10 @@ import { Post } from '../../../models/post';
 export class PostSummaryComponent {
     @Input() post: Post;
 
-    constructor(private router: Router) {
+    constructor(private router: Router) {        
     }
 
     navigateToPost() {
-        this.router.navigate(['post/details', this.post.id]);
-        console.log(this.post.id);
+        this.router.navigate(['post/details', this.post.id]);        
     }
 }

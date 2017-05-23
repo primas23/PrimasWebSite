@@ -1,10 +1,11 @@
 <div class="card">
-    <img src="{{ post.imageSrc }}" alt="Nature" style="width:100%">
+    <img src="{{ post.image.src }}" alt="{{ post.image.alt }}" style="width:100%" />
+    
     <div class="container-fluid">
         <h3><b>{{ post.title }}</b></h3>
         <h5>{{ post.description }}, <span class="opacity">{{ post.createdOn }}</span></h5>
     </div>
-
+    
     <div class="container-fluid">
         <p>{{ post.content }}</p>
         <div class="row">
