@@ -11,10 +11,10 @@ export class PostService {
 
     constructor(private http: Http) {
         let firstImage = new Image();
-        firstImage.id = '4';
+        firstImage.id = '1';
         firstImage.src = './images/woods.jpg';
         firstImage.alt = 'woods';
-        let first = new Post();        
+        let first = new Post();
         first.id = '1';
         first.image = firstImage;
         first.title = 'TITLE HEADING';
@@ -24,10 +24,10 @@ export class PostService {
         first.comments = [];
 
         let secondImage = new Image();
-        secondImage.id = '4';
-        secondImage.src = './images/woods.jpg';
+        secondImage.id = '2';
+        secondImage.src = './images/bridge.jpg';
         secondImage.alt = 'woods';
-        let second = new Post();        
+        let second = new Post();
         second.id = '2';
         second.image = secondImage;
         second.title = 'TITLE HEADING 2';
@@ -36,9 +36,9 @@ export class PostService {
         second.content = 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.';
         second.comments = [];
 
-        
+
         let thirdImage = new Image();
-        thirdImage.id = '4';
+        thirdImage.id = '3';
         thirdImage.src = './images/woods.jpg';
         thirdImage.alt = 'woods';
         let third = new Post();
@@ -50,10 +50,10 @@ export class PostService {
         third.content = 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.';
         third.comments = [];
 
-        
+
         let forthImage = new Image();
         forthImage.id = '4';
-        forthImage.src = './images/woods.jpg';
+        forthImage.src = './images/bridge.jpg';
         forthImage.alt = 'woods';
         let forth = new Post();
         forth.id = '4';
@@ -70,17 +70,25 @@ export class PostService {
     getPostSummaries() {
         //return this.http.get('api/Post/GetPostSummaries')
         //    .map(r => r.json() as Post[])
-        //    .toPromise();       
-
-
-        return this.posts;
+        //    .toPromise();
+        var postSummary = this.posts.map(p => Object.assign({}, p));
+        postSummary.forEach(p => p.content = p.content.substr(0, 100));
+        
+        return postSummary;
     }
 
     getPostDetails(id: string) {
         //return this.http.get(`api/Post/GetPostDetail/${id}`)
         //    .map(r => r.json() as Post)
-        //    .toPromise();        
-
+        //    .toPromise();
+        //console.log(this.posts);
         return this.posts.find(p => p.id === id);
+    }
+
+    getPopularPosts() {
+        //return this.http.get('api/Post/GetPostSummaries')
+        //    .map(r => r.json() as Post[])
+        //    .toPromise();
+        return this.posts;
     }
 }
