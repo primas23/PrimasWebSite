@@ -5,9 +5,9 @@ import { UniversalModule } from 'angular2-universal';
 import { AppComponent } from './components/app/app.component';
 import { NavmenuComponent } from './components/shared/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
-import { PostSummaryComponent } from './components/blog/post-summary/post-summary.component';
-import { PostListComponent } from './components/blog/post-list/post-list.component';
-import { PostDetailsComponent } from './components/blog/post-details/post-details.component';
+import { PostSummaryComponent } from './components/post/post-summary/post-summary.component';
+import { PostListComponent } from './components/post/post-list/post-list.component';
+import { PostDetailsComponent } from './components/post/post-details/post-details.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 import { PostService } from './services/post-service';
