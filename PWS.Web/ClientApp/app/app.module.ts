@@ -29,7 +29,7 @@ import { UserService } from './services/user-service';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'blog', component: PostListComponent },
+            { path: 'post', component: PostListComponent },
             { path: 'post/:id', component: PostDetailsComponent },
             { path: '**', redirectTo: 'home' }
         ])
