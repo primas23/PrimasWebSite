@@ -15,6 +15,6 @@ export class PostSummaryComponent {
     }
 
     navigateToPost() {
-        this.router.navigate(['post/details', this.post.id]);        
+        this.router.navigate(['post', this.post.id]);        
     }
 }

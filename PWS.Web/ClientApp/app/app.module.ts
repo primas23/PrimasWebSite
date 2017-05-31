@@ -30,7 +30,7 @@ import { UserService } from './services/user-service';
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'blog', component: PostListComponent },
-            { path: 'post/details/:id', component: PostDetailsComponent },
+            { path: 'post/:id', component: PostDetailsComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ],
